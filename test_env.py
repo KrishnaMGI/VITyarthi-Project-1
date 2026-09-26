@@ -8,5 +8,7 @@ import fitz
 import data
 # a ="Taau"
 # main.signer(a)
-main.verifier()
+# main.verifier()
 #main.runmode()
+a = os.name
+print(a)

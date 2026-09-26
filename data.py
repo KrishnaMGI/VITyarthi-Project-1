@@ -1,3 +1,8 @@
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent
+
+
+
 user_ids = {
     "Taau" : 11,
     "Dr.SoniJi" : 12,
@@ -5,9 +10,9 @@ user_ids = {
 }
 
 user_sign_path = {
-    "Taau" : r"C:\VIT\vit python\PRO1\Seal Sign users\Taau.png ",
-    "Dr.SoniJi" : r"C:\VIT\vit python\PRO1\Seal Sign users\Dr.SoniJi.png ",
-    "other": r"C:\VIT\nit python\PRO1\Seal Sign users\Other.png "
+    "Taau" : f"{BASE_DIR}/Seal Sign users/Taau.png",
+    "Dr.SoniJi" : f"{BASE_DIR}/Seal Sign users/Dr.SoniJi.png",
+    "other": f"{BASE_DIR}/Seal Sign users/Other.png"
 }
 
 session_ids = ["krishna", ]
