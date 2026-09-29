@@ -13,7 +13,7 @@ def signer(username):
     f.write(session_id + "\n")
     f.close()          # inserting session id in main data base
 
-    print(r"Test this for testing: C:\VIT\vit python\PRO1\test pdfs\Test 3.pdf")
+    print(r"Test this for testing: test pdfs/Test 3.pdf")
     pdf = input("Please Enter Pdf Path: ")       # getting pdf path
     
     if os.path.exists(pdf):                      # checking path and all that things
@@ -56,7 +56,7 @@ def runmode():
 
 
 def verifier():
-    print(r"Test this for testing: C:\VIT\vit python\PRO1\output\Test 2.pdf")
+    print(r"Use This for testing:output\Test 2.pdf")
     pdf = input("Please Enter Pdf Path: ")
 
     if not os.path.exists(pdf):
@@ -73,21 +73,22 @@ def verifier():
         all_keys = f.read()
         f.close()
 
-    if extracted_key in all_keys:
+
+    if extracted_key == "":
+        print("Verification Failed!!!!!")
+    elif extracted_key in all_keys:
         print("Verified Pdf ")
         print(f"Signed By: {extracted_key[14:]}")
         print(f"Date of Signing: {extracted_key[6:8]}/{extracted_key[4:6]}/{extracted_key[0:4]}")
-    else:
-        print("Verification Failed!!!!!")
 
 
 
 
-# Core logic and structure designed and implemented by KRISHNA AGRAWAL 26BCE10210
-#  whts written below is just for good vibes :0
+# Core logic and structure, designed and implemented by KRISHNA AGRAWAL 26BCE10210
+#  whts written below is just for good vibes :-[
 # +-----------------------------------------------------------------+
 
-# |  M G I  S O F T  L T D .   S E C U R I T Y   D A S H B O A R D    |
+# |  M G I  S O F T  L T D .   S E C U R I T Y   D A S H B O A R D  |
 # |  [ Build Version: 2026.1.0-PRO ]                                |
 # |                                                                 |
 # |  Copyright (c) 2026 MGISOFTLTD. All commercial rights reserved. |
